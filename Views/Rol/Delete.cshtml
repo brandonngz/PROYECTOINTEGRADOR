@@ -1,0 +1,24 @@
+@model ProyectoIntegrador.Models.Rol
+@{
+    ViewData["Title"] = "Eliminar";
+}
+<h5>¿Desea Eliminar este registro de la base de datos?</h5>
+
+<div>
+    <h5>Rol ↴</h5>
+    <hr>
+    <dl class="row"> @*agregar descripciones*@
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class = "col-sm-10"> @*Description data/ subdescripcion*@
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+    </dl>
+    <hr>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdRol"/>
+        <input type="submit" value="Eliminar" class="btn btn-outline-danger"/> |
+        <a asp-action="Index">Volver</a>
+    </form>
+</div>

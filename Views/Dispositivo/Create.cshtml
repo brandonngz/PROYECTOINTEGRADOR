@@ -1,0 +1,51 @@
+@model ProyectoIntegrador.Models.Dispositivo
+@{
+    ViewData["Title"] = "Crear";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>@**@
+    <body>
+        <h5>Dispositivo sensor ↴</h5>
+        <div class="row">
+            <div class="col-md-4">@*  
+                    🡻Ejecuta el metodo create de tipo HttpPost*@       
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-floating mb-3 form-group">
+                        <input asp-for="Nombre"  class="form-control"id="floatingInput" placeholder="Nombre" />
+                        <label asp-for="Nombre" class="control-label"></label>
+                            @*Mostrar nuestras validaciones en Conjunto con ModelOnly*@
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3 form-group">
+                        <input asp-for="Codigo" class="form-control" id="floatingInput" placeholder="Codigo"/>
+                        <label asp-for="Codigo" class="control-label"></label>
+                        <span asp-validation-for="Codigo" class="text-danger"></span>
+                    </div>
+                     <div class="form-floating mb-3 form-group">
+                        <input asp-for="Ubicacion" class="form-control" id="floatingInput" placeholder="Ubicacion"/>
+                        <label asp-for="Ubicacion" class="control-label"></label>
+                        <span asp-validation-for="Ubicacion" class="text-danger"></span>
+                    </div>
+                      <div class="form-floating mb-3 form-group">
+                        <input asp-for="Descripcion" class="form-control" id="floatingInput" placeholder="Descripcion"/>
+                        <label asp-for="Descripcion" class="control-label"></label>
+                        <span asp-validation-for="Descripcion" class="text-danger"></span>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-outline-primary"> |
+                        <a asp-action="Index">Volver</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+            
+    </body>
+</html>

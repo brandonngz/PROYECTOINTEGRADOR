@@ -1,0 +1,57 @@
+@model ProyectoIntegrador.Models.Dispositivo
+@{
+    ViewData["Title"] = "Eliminar";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body> @**@
+        <h4>¿Está seguro de eliminar este registro de la BD?</h4>
+        <hr>
+        <h5>Dispositivo sensor 🡣</h5>
+        <br>
+            <div>
+                <dl class="row"> @*Lista de descripcion*@
+                    <dt  class = "col-sm-2">@*Texto de descripcion, titulo*@
+                        
+                        @Html.DisplayNameFor(modelo => modelo.Nombre)
+                    </dt>
+                    <dd class = "col-sm-10">@*element contains data that describes a definition term*@
+                        @Html.DisplayFor(modelo => modelo.Nombre)
+                    </dd>
+                
+                    <dt class = "col-sm-2">@*Texto de descripcion, titulo*@
+                        @Html.DisplayNameFor(modelo => modelo.Codigo)
+                    </dt>
+                    <dd class = "col-sm-10">@*element contains data that describes a definition term*@
+                        @Html.DisplayFor(modelo => modelo.Codigo)
+                    </dd>
+                    <dt class = "col-sm-2">
+                        @Html.DisplayNameFor(modelo => modelo.Ubicacion)
+                    </dt>
+                    <dl class = "col-sm-10">
+                        @Html.DisplayFor(modelo => modelo.Ubicacion)
+                    </dl>
+                
+                    <dt class = "col-sm-2">
+                        @Html.DisplayNameFor(modelo => modelo.Descripcion)
+                    </dt>
+                    <dd class = "col-sm-10">
+                        @Html.DisplayFor(modelo => modelo.Descripcion)
+                    </dd>
+
+                </dl>
+                <hr>
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="IdDispositivo"/>
+                        <input type="submit" value="Eliminar" class="btn btn-outline-danger"/> |
+                        <a asp-action="Index">Volver</a>
+                    </form>
+            </div>
+    </body>
+</html>

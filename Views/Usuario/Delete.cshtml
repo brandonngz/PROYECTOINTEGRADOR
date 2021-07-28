@@ -1,0 +1,65 @@
+@model ProyectoIntegrador.Models.Usuario
+@{
+    ViewData["Title"] = "Eliminar";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h5>¿Estás seguro que deseas eliminar este registro?</h5>
+        <hr>
+            <div>
+                <h5>Usuario ↴</h5>
+                    <dl class="row"> @*agregar descripciones*@
+                        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Apellido)
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Apellido)
+                        </dd>
+                        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Direccion)
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Direccion)
+                        </dd>
+                        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Telefono)
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Telefono)
+                        </dd>
+                        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Email)
+                        </dt>
+                        <dd class = "col-sm-10">    
+                            @Html.DisplayFor(model => model.Email)
+                        </dd>
+                        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.UsuarioDispositivo[0].Dispositivo.Descripcion)
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.UsuarioDispositivo[0].Dispositivo.Descripcion)
+                        </dd>
+                        
+                    </dl>
+                    <hr>
+                        <form asp-action="Delete">
+                            <input type="hidden" asp-for="IdUsuario"/>
+                            <input type="submit" value="Eliminar" class="btn btn-outline-danger"/> |
+                            <a asp-action="Index">Volver</a>
+                        </form>
+            </div>
+</body>
+</html>
