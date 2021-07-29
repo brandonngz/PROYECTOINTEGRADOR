@@ -10,8 +10,11 @@ namespace ProyectoIntegrador.Models
     {
         [Key]
         public int IdRol { get; set; }
-
-        public string Descripcion { get; set; }
+        //====================================================================================
+        [StringLength(20, ErrorMessage = "El máximo de caracteres el 20")]
+        [Required(ErrorMessage = "Dede Ingresar la Descripción!")]   
+        [Display (Name = "Descripción")]
+        public string Descripcion{get;set;}
 
         public List<AdministradorRol> AdministradorRol { get; set; }
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wqO0pNwHj+r4Cv/GhyQqEio1mbHfTnXUJaHVm5j3c087/o1OYP01KkjBu7i+KSD+phvQ8Tdfzvo3+3AYpLI4fg==",
+  "dgSpecHash": "KH1jYjNcpfCvDl+9yasKa9QVO21IUIxa/cbjQLpoyQwlmVoq1TyCUFtqNUGvwW3t/pXNOV+jvG6ByvRN9NR2Cg==",
   "success": true,
   "projectFilePath": "C:\\Udemy\\ProyectoIntegrador\\ProyectoIntegrador.csproj",
   "expectedPackageFiles": [
@@ -155,8 +155,7 @@
     "C:\\Users\\premi\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\premi\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\premi\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\premi\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\premi\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\premi\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

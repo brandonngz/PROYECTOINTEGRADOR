@@ -174,7 +174,9 @@ namespace ProyectoIntegrador.Controllers
             }
 
             var administrador = await _context.Administrador
-                .FirstOrDefaultAsync(m => m.IdAdministrador == id);
+            .Where(p => p.IdAdministrador == id).Include(us => us.AdministradorRol )
+            .ThenInclude(d => d.Rol).FirstOrDefaultAsync();
+            
             if (administrador == null)
             {
                 return NotFound();

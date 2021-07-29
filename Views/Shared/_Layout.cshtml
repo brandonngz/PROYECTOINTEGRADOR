@@ -23,9 +23,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
-                        </li>
+                        
                             <li>
                                 <!-- Large button groups (default and split) -->
                                 <div class="btn-group">
@@ -54,11 +52,11 @@
                                                 <a class="nav-link text-dark" asp-area="" asp-controller="Administrador" asp-action="Index">Administrador</a>
                                             </li>
                                             <li class="nav-item">
-                                                                                             @*Ejecutar el controlador Dispositivo con el metodo Index*@ 
+                                                                                             @*Ejecutar el controlador Rol con el metodo Index*@ 
                                                  <a class="nav-link text-dark" asp-area="" asp-controller="Rol" asp-action="Index">Rol</a>
                                         </ul>
                                 </div>
-                            </li>
+                         </li>
                     </ul>
                 </div>
             </div>
@@ -72,7 +70,8 @@
 
     <footer class="border-top footer text-muted" style="background-color: #EEEEEE;">
         <div class="container">
-            &copy; 2021 - ProyectoIntegrador - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <STYLE>A {text-decoration: none;} </STYLE>
+            &copy; 2021 - ProyectoIntegrador - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

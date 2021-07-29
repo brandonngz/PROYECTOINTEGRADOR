@@ -170,7 +170,10 @@ namespace ProyectoIntegrador.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario.FirstOrDefaultAsync(e => e.IdUsuario == id);
+            var usuario = await _context.Usuario
+            .Where(p => p.IdUsuario == id).Include(us => us.UsuarioDispositivo )
+            .ThenInclude(d => d.Dispositivo).FirstOrDefaultAsync();
+            
 
             if(usuario == null)
             {
@@ -187,6 +190,7 @@ namespace ProyectoIntegrador.Controllers
             var usuarioDispositivo = await _context.UsuarioDispositivo
             .FirstOrDefaultAsync(us => us.IdUsuario == id);
 
+            
             _context.UsuarioDispositivo.Remove(usuarioDispositivo);  
             await _context.SaveChangesAsync();
 
