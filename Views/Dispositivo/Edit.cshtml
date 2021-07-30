@@ -12,9 +12,10 @@
 </head> @**@
     <body> 
         <h4>Dispositivo sensor 🡣</h4>
-        <hr>
+        
         <div class="row">
              <div class="col-md-4">@*Desde index llamamos al metodo Edit y le pasamos el parametro IdDispositivo*@
+                 <hr>
                 <form asp-action="Edit">
                       @*                          🡻  Validar si nos colocan un valor vacio en el HTML*@   
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -41,7 +42,7 @@
                         <input asp-for="Descripcion" class="form-control">
                         <span asp-validation-for="Descripcion" class="text-danger"></span>
                     </div>
-                    
+                    <hr>
                     <div class="form-group"> 
                             @*      Boton con accion submit*@   
                         <input type="submit" value="Guardar" class="btn btn-outline-dark"> |

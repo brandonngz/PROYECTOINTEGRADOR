@@ -59,6 +59,9 @@ namespace ProyectoIntegrador.Controllers
         //                                                                                                                          🡻 Enviar como parametro en elemento int IdDispositivo, esta es una propiedad de UsuarioDispositivo
         public async Task<IActionResult> Create([Bind("IdUsuario, Nombre, Apellido, Direccion, Telefono, Email")] Usuario usuario, int IdDispositivo)
         {
+            //View Data para mostrar el list, aun cuando pulsemos guardar con campos vacios y haga la validacion, esto para que no se borre.
+            ViewData["ListaDispositivos"] = new SelectList(_context.Dispositivo,"IdDispositivo","Descripcion", IdDispositivo);
+
             if(ModelState.IsValid)
             {   //Primera instancia guardada es usario
                 _context.Add(usuario);

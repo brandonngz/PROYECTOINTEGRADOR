@@ -12,12 +12,12 @@
 <body>
 
 <h4>Usuario ↴</h4>
-<br>
+
 <div class="row">
     <div class="col-md-4">
+         <hr>
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
             <div class="form-floating mb-3 form-group">
             <input asp-for="Nombre" class="form-control" id="floatingInput" placeholder="Nombre"/>
             <label asp-for="Nombre" class="control-label"></label>

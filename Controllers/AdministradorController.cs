@@ -50,7 +50,7 @@ namespace ProyectoIntegrador.Controllers
         // GET: Administrador/Create
         public IActionResult Create()
         {  
-             ViewData["ListaDispositivos"] = new SelectList(_context.Rol,"IdRol","Descripcion");
+             ViewData["ListaRoles"] = new SelectList(_context.Rol,"IdRol","Descripcion");
             return View();
         }
 
@@ -61,6 +61,8 @@ namespace ProyectoIntegrador.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdAdministrador,Nombre,Apellido,Direccion,Telefono,Email")] Administrador administrador, int IdRol)
         {
+             //View Data para mostrar el list, aun cuando pulsemos guardar con campos vacios y haga la validacion, esto para que no se borre.   
+             ViewData["ListaRoles"] = new SelectList(_context.Rol,"IdRol","Descripcion", IdRol);
             if (ModelState.IsValid)
             {
                 _context.Add(administrador);
@@ -96,7 +98,7 @@ namespace ProyectoIntegrador.Controllers
                 return NotFound();
             }
             //🡻Obtener un solo elemento del objeto var usuario    
-            ViewData["ListaDispositivos"] = new SelectList(
+            ViewData["ListaRoles"] = new SelectList(
                 // 🡻Enviando el modelo Dispositivo, nos muestra todos los registros de la tabla Dispositivo
                 //                      🡻Campo Value    🡻Campo que se mostrara
                 //                                                      🡻Valor por default, lo que se muestra en el listBox, el valor guardado en la tabla 

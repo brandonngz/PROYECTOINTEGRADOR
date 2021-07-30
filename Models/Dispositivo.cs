@@ -36,6 +36,7 @@ namespace ProyectoIntegrador.Models
 
         //Agregando una propiedad, tipo List
         //Hacemos referencia al modelo UsuarioDispositivo
+        
         public List<UsuarioDispositivo> UsuarioDispositivo { get; set; }
 
 
