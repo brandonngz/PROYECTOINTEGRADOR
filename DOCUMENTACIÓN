@@ -1,1 +1,35 @@
 INFORMACION SOBRE PROYECTO.
+
+================================================================
+
+--CONTROLADORES
+
+HomeController
+
+UsuarioController
+
+AdministradorController
+
+DispositivoController
+
+RolController
+================================================================
+--MODELOS
+
+ProyectoIntegradorContext
+Encargado de crear la clase DbContext, asignar los datos que se asignaran en las tablas de la Base de datos, quitando los valores por defecto.
+
+Usuario
+Dispositivo
+UsuarioDispositivo
+
+Administrador
+Rol
+AdministradorRol
+
+Login
+
+================================================================
+--VISTAS
+
+================================================================
