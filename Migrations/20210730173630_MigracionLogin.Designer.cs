@@ -9,8 +9,8 @@ using ProyectoIntegrador.Models;
 namespace ProyectoIntegrador.Migrations
 {
     [DbContext(typeof(ProyectoIntegradorContext))]
-    [Migration("20210726130327_MigracionAdministradorRol")]
-    partial class MigracionAdministradorRol
+    [Migration("20210730173630_MigracionLogin")]
+    partial class MigracionLogin
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -77,6 +77,21 @@ namespace ProyectoIntegrador.Migrations
                     b.ToTable("AdministradorRol");
                 });
 
+            modelBuilder.Entity("ProyectoIntegrador.Models.AdministradorRol", b =>
+                {
+                    b.HasOne("ProyectoIntegrador.Models.Administrador", "Administrador")
+                        .WithMany("AdministradorRol")
+                        .HasForeignKey("IdAdministrador")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProyectoIntegrador.Models.Rol", "Rol")
+                        .WithMany("AdministradorRol")
+                        .HasForeignKey("IdRol")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+                
             modelBuilder.Entity("ProyectoIntegrador.Models.Dispositivo", b =>
                 {
                     b.Property<int>("IdDispositivo")
@@ -111,6 +126,26 @@ namespace ProyectoIntegrador.Migrations
                     b.HasKey("IdDispositivo");
 
                     b.ToTable("Dispositivo");
+                });
+
+            modelBuilder.Entity("ProyectoIntegrador.Models.Login", b =>
+                {
+                    b.Property<int>("LoginId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Usuario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("LoginId");
+
+                    b.ToTable("Login");
                 });
 
             modelBuilder.Entity("ProyectoIntegrador.Models.Rol", b =>
@@ -188,22 +223,7 @@ namespace ProyectoIntegrador.Migrations
                     b.ToTable("UsuarioDispositivo");
                 });
 
-            modelBuilder.Entity("ProyectoIntegrador.Models.AdministradorRol", b =>
-                {
-                    b.HasOne("ProyectoIntegrador.Models.Administrador", "Administrador")
-                        .WithMany("AdministradorRol")
-                        .HasForeignKey("IdAdministrador")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ProyectoIntegrador.Models.Rol", "Rol")
-                        .WithMany("AdministradorRol")
-                        .HasForeignKey("IdRol")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("ProyectoIntegrador.Models.UsuarioDispositivo", b =>
+                 modelBuilder.Entity("ProyectoIntegrador.Models.UsuarioDispositivo", b =>
                 {
                     b.HasOne("ProyectoIntegrador.Models.Dispositivo", "Dispositivo")
                         .WithMany("UsuarioDispositivo")
@@ -217,6 +237,10 @@ namespace ProyectoIntegrador.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
+
+            
+
+           
 #pragma warning restore 612, 618
         }
     }

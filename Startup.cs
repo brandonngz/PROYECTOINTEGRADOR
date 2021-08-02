@@ -24,7 +24,13 @@ namespace ProyectoIntegrador
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {   //                            Establecemos las propiedades del MIddleward
+
+            services.AddSession(optiones =>
+            {
+                optiones.IdleTimeout = TimeSpan.FromSeconds(300);
+                optiones.Cookie.HttpOnly = true;
+            });
             services.AddControllersWithViews();
             //Agregar un metodo para establecer la conexion con nuestra BD SQL
             // 🡻                  🡻tipo de contexto         🡻Parametro con los datos de la clase en ProyectoIntegradorContext.
@@ -54,11 +60,13 @@ namespace ProyectoIntegrador
 
             app.UseAuthorization();
 
+            app.UseSession();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Login}/{action=Index}/{id?}");
             });
         }
     }

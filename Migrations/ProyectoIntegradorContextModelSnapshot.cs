@@ -60,6 +60,21 @@ namespace ProyectoIntegrador.Migrations
                     b.ToTable("Administrador");
                 });
 
+            modelBuilder.Entity("ProyectoIntegrador.Models.AdministradorRol", b =>
+                {
+                    b.Property<int>("IdAdministrador")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdRol")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdAdministrador", "IdRol");
+
+                    b.HasIndex("IdRol");
+
+                    b.ToTable("AdministradorRol");
+                });
+
             modelBuilder.Entity("ProyectoIntegrador.Models.Dispositivo", b =>
                 {
                     b.Property<int>("IdDispositivo")
@@ -94,6 +109,26 @@ namespace ProyectoIntegrador.Migrations
                     b.HasKey("IdDispositivo");
 
                     b.ToTable("Dispositivo");
+                });
+
+            modelBuilder.Entity("ProyectoIntegrador.Models.Login", b =>
+                {
+                    b.Property<int>("LoginId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Usuario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("LoginId");
+
+                    b.ToTable("Login");
                 });
 
             modelBuilder.Entity("ProyectoIntegrador.Models.Rol", b =>
@@ -169,6 +204,21 @@ namespace ProyectoIntegrador.Migrations
                     b.HasIndex("IdDispositivo");
 
                     b.ToTable("UsuarioDispositivo");
+                });
+
+            modelBuilder.Entity("ProyectoIntegrador.Models.AdministradorRol", b =>
+                {
+                    b.HasOne("ProyectoIntegrador.Models.Administrador", "Administrador")
+                        .WithMany("AdministradorRol")
+                        .HasForeignKey("IdAdministrador")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProyectoIntegrador.Models.Rol", "Rol")
+                        .WithMany("AdministradorRol")
+                        .HasForeignKey("IdRol")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ProyectoIntegrador.Models.UsuarioDispositivo", b =>

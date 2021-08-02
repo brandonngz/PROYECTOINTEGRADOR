@@ -1,0 +1,78 @@
+@model ProyectoIntegrador.Models.Login
+
+
+@{
+  Layout= null;
+}
+    
+    <link rel="stylesheet" href="~/css/VistaLogin.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="wrapper fadeInDown">
+    <h4 >Iniciar sesión</h4>
+    <hr>
+    <br>
+    <div id="formContent">
+       <br>
+        <form asp-action="Login">
+          <div asp-validation-summary="ModelOnly"></div>
+               @* Imagen *@
+              <div class="fadeIn first">
+                <img src="https://image.flaticon.com/icons/png/512/3596/3596080.png" class="brand_logo" alt="Logo">
+              </div>
+              <br>
+              @* Campo Usuario *@
+                  <div class="row">
+                      <div class="input-field col s6">
+                        <label asp-for="Usuario" class="font-weight-bold"></label>
+                        <input asp-for="Usuario" type="text" autocomplete="off">
+                          
+                        <span asp-validation-for="Usuario"></span>
+                      </div>
+                  </div>
+                  <br>
+                  @* Campo Password *@
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <label asp-for="Password" class="font-weight-bold"></label>
+                        <input asp-for="Password" type="Password" >
+                          
+                        <span asp-validation-for="Password"></span>
+                      </div>
+                  </div>
+                  <br>
+                  <span>@ViewBag.errorLogin</span>
+                  @* Check Button *@
+               <div class="col-12">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                          Marcar para continuar.
+                        </label>
+                        <div class="invalid-feedback">
+                            Deberá aceptar antes de continuar
+                       </div>
+                  </div>
+              </div>
+            @* Campo Submit *@
+            <div class="row">
+                <div class="col s6 m6">
+                    <input class="font-weight-bold" type="submit" value="Guardar">
+                </div>
+            </div>
+
+            @* Footer *@
+            <footer class="text-center">
+                <p class="font-weight-bold" style="text-align: center;">Sistema de Seguriada S.A. de C.V.</p>
+           </footer>   
+       </form>
+       
+    </div>
+</div>
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+

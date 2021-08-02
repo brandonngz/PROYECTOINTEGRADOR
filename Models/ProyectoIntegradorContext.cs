@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Reflection.Emit;
 using Microsoft.EntityFrameworkCore;
 using ProyectoIntegrador.Models;
@@ -26,6 +27,8 @@ namespace ProyectoIntegrador.Models
         public DbSet<UsuarioDispositivo> UsuarioDispositivo { get; set;}
 
         public DbSet<AdministradorRol> AdministradorRol { get; set;}
+        public DbSet<Login> Login { get; set;}
+       
 
         //Especificar Caracteristicas adicionales a nuestra entidad Dispositivo. Modificar las opcines genericas o estandar.
         //🡻 Solo se puede usar en esta clase
@@ -175,6 +178,38 @@ namespace ProyectoIntegrador.Models
             .WithMany(p => p.AdministradorRol)
             //esta sera la llave foranea dentro de la tabla UsuarioDispositivo, a traves de EntityFramework
             .HasForeignKey(p => p.IdRol);
+            
+
+
+
+//===============================================================================================================================================================
+            modelBuilder.Entity<Login>(entidad =>
+            {
+                entidad.ToTable("Login");
+
+                entidad.HasKey(l => l.LoginId );
+                
+                entidad.Property(l => l.Usuario)
+                .IsRequired();//Propiedad Not Null en SQL
+
+                entidad.Property(l => l.Password)
+                .IsRequired();
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
         //🡹 Solo se puede usar en esta clase
