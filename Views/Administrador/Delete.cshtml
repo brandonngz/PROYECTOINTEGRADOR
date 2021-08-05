@@ -5,6 +5,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <script src="/js/EditarDeleteCreateView.js"></script>
     <title>Delete</title>
 </head>
 <body>
@@ -55,7 +56,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="IdAdministrador" />
-        <input type="submit" value="Delete" class="btn btn-outline-danger" /> |
+        <input type="submit" onclick="Alert()" value="Delete" class="btn btn-outline-danger" /> |
         <a asp-action="Index">Volver</a>
     </form>
 </div>
