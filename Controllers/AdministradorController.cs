@@ -170,7 +170,8 @@ namespace ProyectoIntegrador.Controllers
         // GET: Administrador/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
+
+            if(id == null)
             {
                 return NotFound();
             }
@@ -179,32 +180,32 @@ namespace ProyectoIntegrador.Controllers
             .Where(p => p.IdAdministrador == id).Include(us => us.AdministradorRol )
             .ThenInclude(d => d.Rol).FirstOrDefaultAsync();
             
-            if (administrador == null)
-            {
-                return NotFound();
-            }
 
+            if(administrador == null)
+            {
+               return NotFound(); 
+            }
             return View(administrador);
         }
 
-        // POST: Administrador/Delete/5
+                   //Alias para poder acceder al DeleteConfirmed
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var administradorRol = await _context.Administrador
+            var administradorRol = await _context.AdministradorRol
             .FirstOrDefaultAsync(us => us.IdAdministrador == id);
 
-            _context.Administrador.Remove(administradorRol);
+            
+            _context.AdministradorRol.Remove(administradorRol);  
             await _context.SaveChangesAsync();
+
 
             var administrador = await _context.Administrador.FindAsync(id);
             _context.Administrador.Remove(administrador);
            await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
-
-            
         }
 
        
