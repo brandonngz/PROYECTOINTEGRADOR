@@ -15639,6 +15639,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Historial\\Index.cshtml",
+      "TargetPath": "Views\\Historial\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"

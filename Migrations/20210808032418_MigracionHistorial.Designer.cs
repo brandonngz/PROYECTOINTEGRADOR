@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProyectoIntegrador.Models;
 
 namespace ProyectoIntegrador.Migrations
 {
     [DbContext(typeof(ProyectoIntegradorContext))]
-    partial class ProyectoIntegradorContextModelSnapshot : ModelSnapshot
+    [Migration("20210808032418_MigracionHistorial")]
+    partial class MigracionHistorial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

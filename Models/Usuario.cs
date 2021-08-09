@@ -1,5 +1,6 @@
 using System.Collections.Generic;//instanciar un tipo de dato list.
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProyectoIntegrador.Models
 {
@@ -7,6 +8,7 @@ namespace ProyectoIntegrador.Models
     {
         //====================================================================================
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdUsuario {get; set;}
         //====================================================================================
         [StringLength(20, ErrorMessage = "El máximo de caracteres es 20")]

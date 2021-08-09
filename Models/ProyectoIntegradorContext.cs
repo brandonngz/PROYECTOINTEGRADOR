@@ -28,6 +28,8 @@ namespace ProyectoIntegrador.Models
 
         public DbSet<AdministradorRol> AdministradorRol { get; set;}
         public DbSet<Login> Login { get; set;}
+
+        public DbSet<Historial> Historial {get; set;}
        
 
         //Especificar Caracteristicas adicionales a nuestra entidad Dispositivo. Modificar las opcines genericas o estandar.
@@ -196,7 +198,22 @@ namespace ProyectoIntegrador.Models
                 .IsRequired();
             });
 
+            modelBuilder.Entity<Historial>(entidad =>
+            {
+                entidad.ToTable("Historial");
+                entidad.HasKey(h => h.IdHistorial);
+                entidad.Property(h => h.fecha);
 
+                entidad.Property(h => h.descripcion)
+                .IsRequired()
+                .HasMaxLength(100)
+                .IsUnicode(false);
+                entidad.Property(h => h.usuario)
+                .IsRequired()
+                .HasMaxLength(20)
+                .IsUnicode(false);
+            }
+            );
 
 
 

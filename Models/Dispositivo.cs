@@ -2,6 +2,7 @@ using System.ComponentModel;
 using System.Linq.Expressions;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProyectoIntegrador.Models
 {
@@ -9,6 +10,7 @@ namespace ProyectoIntegrador.Models
     {   
         //====================================================================================
         [Key]   //Llave Primaria
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdDispositivo {get; set;}
          //====================================================================================
         [StringLength(10, ErrorMessage = "El campos solo debe tener 10 Caracteres MÁximo.")]//Limitar en la vista el numero de caracteres admitidos

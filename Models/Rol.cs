@@ -2,6 +2,7 @@ using System.ComponentModel;
 using System.Linq.Expressions;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProyectoIntegrador.Models
 {
@@ -9,6 +10,7 @@ namespace ProyectoIntegrador.Models
     public class Rol
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdRol { get; set; }
         //====================================================================================
         [StringLength(50, ErrorMessage = "El máximo de caracteres el 50")]
