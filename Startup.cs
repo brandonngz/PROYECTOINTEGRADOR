@@ -32,12 +32,15 @@ namespace ProyectoIntegrador
                 optiones.Cookie.HttpOnly = true;
             });
             services.AddControllersWithViews();
+            
             //Agregar un metodo para establecer la conexion con nuestra BD SQL
             // 🡻                  🡻tipo de contexto         🡻Parametro con los datos de la clase en ProyectoIntegradorContext.
             // 🡻                                                     🡻Operador Lambda, define a opciones como parametro
             //                                                                                  🡻Objeto Configuration acceder al archivo .json metodo 
             //                                                                                  🡻GetConnectionString obtenemos la propiedad ProyectoIntegradorContext el archivo appsettings.json                       
             services.AddDbContext<ProyectoIntegradorContext>(opciones => opciones.UseSqlServer(Configuration.GetConnectionString("ProyectoIntegradorContext")));
+
+              
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

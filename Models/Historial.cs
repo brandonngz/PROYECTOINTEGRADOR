@@ -1,6 +1,6 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
@@ -18,4 +18,6 @@ namespace ProyectoIntegrador.Models
         [Display(Name ="Usuario")]
         public string usuario { get; set; }
     }
+
+    
 }

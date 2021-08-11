@@ -15709,6 +15709,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Historial\\Delete.cshtml",
+      "TargetPath": "Views\\Historial\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Administrador\\Delete.cshtml",
       "TargetPath": "Views\\Administrador\\Delete.cshtml",
       "FileKind": "mvc"

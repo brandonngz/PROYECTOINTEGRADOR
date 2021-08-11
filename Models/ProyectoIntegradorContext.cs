@@ -7,12 +7,12 @@ using ProyectoIntegrador.Models;
 namespace ProyectoIntegrador.Models
 {
     public class ProyectoIntegradorContext : DbContext //Clase DbContext, conexion con SQL
-    {   
+    {
+    
         //Constructor
         //pasar opciones por default para inicializarlas
         //Creando un tipo opciones donde la clase sera dbcontextOptions le pasamos un tipo de datos TurnosContext
-        public ProyectoIntegradorContext(DbContextOptions<ProyectoIntegradorContext> opciones)
-        : base(opciones) //Heredar las opcines base a la clase TurnosContext
+        public ProyectoIntegradorContext(DbContextOptions<ProyectoIntegradorContext> opciones) : base(opciones) //Heredar las opcines base a la clase ProyectoIntegradorContext
         {
             
         }

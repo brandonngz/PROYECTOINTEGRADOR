@@ -1,4 +1,9 @@
 @model IEnumerable<ProyectoIntegrador.Models.Historial>
+@{
+    ViewData["Title"] = "Menú";
+}   
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +15,13 @@
 <body>
     <h4>Historial 🡣</h4>
 <br>
-
+           
 <table class="table table-striped table-hover">
     <thead>
         <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.IdHistorial)
+            </th>
             <th scope="col">
                 @Html.DisplayNameFor(model => model.fecha)
             </th>
@@ -28,8 +36,11 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdHistorial)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.fecha)
             </td>
@@ -38,8 +49,13 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.usuario)
+             <td>
+                <a asp-action="Delete" asp-route-id="@item.IdHistorial">Eliminar</a>
+            </td>
         </tr>
 }
+    
+    
     </tbody>
 </table>
 </body>
