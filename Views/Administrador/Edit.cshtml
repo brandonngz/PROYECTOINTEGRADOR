@@ -5,11 +5,12 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <script src="/js/EditarDeleteCreateView.js"></script>
+    
+    
     <title>Edit</title>
 </head>
 <body>
-
+<script src="js/View.js"></script>
 <h4>Administrador ↴</h4>
 <hr />
 <div class="row">
@@ -48,11 +49,12 @@
              </div>
             <hr>
             <div class="form-group">
-                <input type="submit" onclick="Alert()" value="Guardar" class="btn btn-outline-primary" /> |
-                <a asp-action="Index">Volver</a>
+                 <input type="submit" onclick="Alert()" value="Guardar" class="btn btn-primary" style="margin: 0 20px 0px 0px;"> 
+                <a asp-action="Index"class="btn btn-secondary" ><i class="bi bi-backspace"></i> Volver</a>
             </div>
         </form>
     </div>
 </div>
+
 </body>
 </html>

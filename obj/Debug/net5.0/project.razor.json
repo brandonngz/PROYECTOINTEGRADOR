@@ -15739,6 +15739,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Home\\Documentacion.cshtml",
+      "TargetPath": "Views\\Home\\Documentacion.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

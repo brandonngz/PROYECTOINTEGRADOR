@@ -2,3 +2,17 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+//Funcion de los datos se han agregado al boton Guardar.
+function Alert(){
+    alert("Los datos se han actualizado en la BD ProyectoIntegrador.")
+}
+
+
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+      alert("El nombre debe ser llenado");
+      return false;
+    }
+  }

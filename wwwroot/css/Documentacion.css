@@ -1,0 +1,21 @@
+.main{
+    background-color: #B2B1B9;
+    margin: 20px 20px 20px 20px;
+    
+}
+footer{
+    background-color: #B2B1B9;
+    
+}
+.container-fluid{
+    width: auto;
+}
+.row{
+    text-align: left;
+    padding-inline: 10px;
+}
+p{
+    font-style: italic;
+    font-size: 25px;
+    text-align: center;   
+}

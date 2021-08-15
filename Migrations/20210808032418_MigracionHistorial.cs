@@ -21,6 +21,7 @@ namespace ProyectoIntegrador.Migrations
                 {
                     table.PrimaryKey("PK_Historial", x => x.IdHistorial);
                 });
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

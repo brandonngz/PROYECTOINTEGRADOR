@@ -32,7 +32,12 @@ namespace ProyectoIntegrador
                 optiones.Cookie.HttpOnly = true;
             });
             services.AddControllersWithViews();
-            
+
+            //SQL RAW COMMANDS
+            services.AddDbContextPool<ProyectoIntegradorContext>(options => 
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("ProyectoIntegradorContext"));
+            });
             //Agregar un metodo para establecer la conexion con nuestra BD SQL
             // 🡻                  🡻tipo de contexto         🡻Parametro con los datos de la clase en ProyectoIntegradorContext.
             // 🡻                                                     🡻Operador Lambda, define a opciones como parametro

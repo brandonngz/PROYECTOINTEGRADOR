@@ -1,5 +1,8 @@
 @model IEnumerable<ProyectoIntegrador.Models.Administrador>
 
+@{
+    ViewData["Title"] = "Home Page";
+}
 <!DOCTYPE html>
 
 <html>
@@ -10,12 +13,11 @@
 <body>
     <h4>Administradores 🡣</h4>
 <br>
-<p>
-    <a asp-action="Create">Nuevo Administrador 🡸</a>
-</p>
-<table class="table table-striped table-hover">
-    <thead>
+
+<table class="table table-striped table-hover table-bordered ">
+    <thead class="table-dark">
         <tr>
+            
             <th scope="col">
                 @Html.DisplayNameFor(model => model.Nombre)
             </th>
@@ -31,31 +33,33 @@
             <th scope="col">
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            <th></th>
+            <th class="text-center">
+                <a asp-action="Create" class="btn btn-light"><i class="bi bi-person-plus-fill bi-lg"></i> Nuevo Administrador</a>
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.Nombre)
             </td>
-            <td>
+           <td scope="row">
                 @Html.DisplayFor(modelItem => item.Apellido)
             </td>
-            <td>
+           <td scope="row">
                 @Html.DisplayFor(modelItem => item.Direccion)
             </td>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.Telefono)
             </td>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdAdministrador">Editar</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdAdministrador">Eliminar</a> |
-                <a asp-action="Details" asp-route-id="@item.IdAdministrador">Detalles</a>
+            <td class="text-center">
+                <a asp-action="Edit" asp-route-id="@item.IdAdministrador"><i class="bi bi-pen-fill"></i></a>
+                <a asp-action="Delete" asp-route-id="@item.IdAdministrador" class="text-danger"><i class="bi bi-trash-fill ml-3"> </i></a>
+                <a asp-action="Details" asp-route-id="@item.IdAdministrador"><i class="bi bi-exclamation-square-fill ml-3"></i></a>
             </td>
         </tr>
 }

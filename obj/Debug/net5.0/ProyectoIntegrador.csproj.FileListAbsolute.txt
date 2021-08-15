@@ -152,3 +152,4 @@ C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Administrador\Index.csh
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Historial\Index.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Historial\Delete.cshtml.g.cs
+C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Home\Documentacion.cshtml.g.cs

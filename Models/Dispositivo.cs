@@ -13,7 +13,7 @@ namespace ProyectoIntegrador.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdDispositivo {get; set;}
          //====================================================================================
-        [StringLength(10, ErrorMessage = "El campos solo debe tener 10 Caracteres MÁximo.")]//Limitar en la vista el numero de caracteres admitidos
+        [StringLength(10, ErrorMessage = "El campos solo debe tener 10 Caracteres Máximo.")]//Limitar en la vista el numero de caracteres admitidos
         [Required (ErrorMessage = "Debe Ingresar el nombre!")]//El campo es requerido, no se puede dejar en blanco el campo    
         // 🡻En todas la partes donde tengamos DisplayNameFor, nos asignara lo que tengamos entre parentesis, sustituyendo el nombre del campo real
         //                          🡻Mientras el campo este vacio nos dira este enunciado.

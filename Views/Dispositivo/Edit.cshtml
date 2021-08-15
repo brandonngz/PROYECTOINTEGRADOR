@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/EditarDeleteCreateView.js"></script>
+    <script src="~/js/alert.js"></script>
     <title>Document</title>
 </head> @**@
     <body> 
@@ -46,8 +46,8 @@
                     <hr>
                     <div class="form-group"> 
                             @*      Boton con accion submit*@   
-                        <input type="submit" onclick="Alert()" value="Guardar" class="btn btn-outline-dark"> |
-                        <a asp-action="Index">Volver</a>
+                        <input type="submit" onclick="Alert()" value="Guardar" class="btn btn-primary" style="margin: 0 20px 0px 0px;"> 
+                        <a asp-action="Index"class="btn btn-secondary" ><i class="bi bi-backspace"></i> Volver</a>
                     </div>
                 </form>
             </div>   
