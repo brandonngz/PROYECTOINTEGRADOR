@@ -16,3 +16,5 @@ function validateForm() {
       return false;
     }
   }
+
+  document.getElementById('textId').value = '';

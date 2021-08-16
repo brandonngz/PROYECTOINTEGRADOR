@@ -22,10 +22,11 @@ namespace ProyectoIntegrador.Controllers
         }
 //===============================================================================================================================================================
         // GET: Administrador
-        public async Task<IActionResult> Index()
+        public IActionResult Index(string buscar)
         {
-            return View(await _context.Administrador.ToListAsync());
+             return View(_context.Administrador.Where(x=>x.Nombre.Contains(buscar) || buscar == null).ToList());
         }
+
 //===============================================================================================================================================================
         // GET: Administrador/Details/5
         public async Task<IActionResult> Details(int? id)

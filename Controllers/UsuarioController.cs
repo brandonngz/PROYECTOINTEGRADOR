@@ -19,10 +19,13 @@ namespace ProyectoIntegrador.Controllers
         }
 //===============================================================================================================================================================
         //Index
-        public async Task<IActionResult> Index()
+        public IActionResult Index(string buscar)
         {
                     //Tabla dispositivos ToList Retorna todos los datos de ella 
-            return View(await _context.Usuario.ToListAsync());
+
+             
+             
+            return View(_context.Usuario.Where(x=>x.Nombre.Contains(buscar) || buscar == null).ToList());
 
         }
  //===============================================================================================================================================================       
@@ -204,8 +207,7 @@ namespace ProyectoIntegrador.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-
-
+//===============================================================================================================================================================
 
     }
 }
