@@ -144,12 +144,12 @@ C:\Udemy\ProyectoIntegrador\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.Workspace
 C:\Udemy\ProyectoIntegrador\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Udemy\ProyectoIntegrador\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Udemy\ProyectoIntegrador\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
+C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Historial\Index.cshtml.g.cs
+C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Historial\Delete.cshtml.g.cs
+C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Home\Documentacion.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Administrador\Create.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Administrador\Delete.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Administrador\Details.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Administrador\Edit.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Administrador\Index.cshtml.g.cs
-C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
-C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Historial\Index.cshtml.g.cs
-C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Historial\Delete.cshtml.g.cs
-C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Home\Documentacion.cshtml.g.cs
