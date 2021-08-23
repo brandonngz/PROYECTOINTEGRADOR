@@ -4,28 +4,34 @@
 }
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dispositivos</title>
+    <meta name="viewport" content="width=device-width" />
+     <link rel="stylesheet" href="~/css/index.css">
+    <title>Index</title>
 </head>
 <body>
-    <div class="row">
-            <div class="col-3"><h4>Dispositivo 🡣</h4></div>
-            <div class="col-9"><p><u>Nunca Eliminar el dispositivo de un Usuario vigente, favor de editarlo y poner IdDispositivo #1</u></p></div>
-        </div>
-    <br>
-        <table class="table table-striped">
-            <thead class="table-dark">
+
+<div class="containers font">
+    <header  class="header " >
+        <h4>GESTIÓN DE DISPOSITIVOS <i class="bi bi-gear-fill"></i></h4>
+    </header>
+    <div class="main">
+            <div class="img">
+                    <img src="https://image.flaticon.com/icons/png/512/2237/2237440.png" class="brand_logo" alt="Logo">
+            </div>
+        <h4>Tabla con Información 🡣</h4>
+        <br>
+        <br>
+        <br>
+        <div class="middle">
+        <table class="table table-striped table-">
+            <thead class="table-dark ">
+                <tr>
                     <th scope="col">
                         @Html.DisplayNameFor(model => model.IdDispositivo)
                     </th>
                     <th scope="col">
-                        @*Enviamos como parametro al metodo, el campo de la tabla Dispositivo
-                              🡻                             🡻
-                                                   🡻recibe la funcion*@
                         @Html.DisplayNameFor(model => model.Nombre)
                     </th>
                     <th scope="col">
@@ -37,43 +43,50 @@
                     <th scope="col">
                         @Html.DisplayNameFor(model => model.Descripcion)
                     </th>
-                    <th class="text-center">
-                        <a asp-action="Create" class="btn btn-light"><i class="bi bi-person-plus-fill bi-lg"></i> Nuevo Dispositivo</a>
-                    </th>
+                    <th class="text-center"><a class="btn btn-light" href="http://localhost:5000/Usuario">Usuario</a></th>
                 </tr>
             </thead>
             <tbody>
-                @*Manera de comentar en una pagina CSHTML
-                                        🡻Obtemos la identidad Dispositivo mediante @model         *@
-                @foreach (var item in Model) //recorrer para mostrar los registros
-                {
-                   <tr>
-                       <td scope="row">
-                            @Html.DisplayFor(modelItem => item. IdDispositivo)
-                       </td>
-                        <td>
-                            @*Obtenemos el dato del foreach que estamos recorriendo y se lo asignamos a modelItem
-                            Enviamos como parametro al metodo, el campo de la tabla Dispositivo
-                                🡻 muestra el dato dentro de la tabla Dispositivo en el campo nombre*@      
-                            @Html.DisplayFor(modelItem => item.Nombre)
-                        </td>
-                        <td scope="row">
-                            @Html.DisplayFor(modelItem => item.Codigo)
-                        </td>
-                        <td scope="row">
-                            @Html.DisplayFor(modelItem => item.Ubicacion)
-                        </td>
-                        <td scope="row">
-                            @Html.DisplayFor(modelItem => item.Descripcion)
-                        </td>
-                        <td class="text-center"> @*                🡻Accediento al modelo, el objeto de iteraccion y accedemos a la propiedad IdEspecialidad *@
-                            <a asp-action="Edit" asp-route-id="@item.IdDispositivo"><i class="bi bi-pen-fill"></i></a>
-                            <a asp-action="Delete" asp-route-id="@item.IdDispositivo" class="text-danger"><i class="bi bi-trash-fill ml-3"> </i></a>
-                        </td>
-                </tr>  
+                    @foreach (var item in Model) {
+                <tr>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.IdDispositivo)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Codigo)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Ubicacion)
+                    </td >
+                    <td scope="row" > 
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <td class="text-center">
+                        <a asp-action="Edit" asp-route-id="@item.IdDispositivo" class="text-dark"><i class="bi bi-pen-fill" ></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.IdDispositivo" class="text-danger"><i class="bi bi-trash-fill ml-3"> </i></a>
+                    </td>
+                </tr>
+                     
                 }
             </tbody>
         </table>
-        
-    </body>
+        </div>
+    </div>
+    <aside class="sidebar text-center">
+        <h4 style="padding: 10px;">Menú</h4>
+        <tr>
+            <th>
+                <a asp-action="Create" class="btn btn-dark"><i class="bi bi-person-plus-fill bi-lg"></i> Nuevo Dispositivo</a>
+            </th>
+        </tr>
+        <hr>
+        <h5 style="text-align: left; padding: 10px 0px 0px 10px;">Tip:</h5>
+        <p style="text-align: left; padding: 0px 0px 0px 10px;;">Nuevo Dispositivo: Nueva puerta de la casa de seguiridad.</p>
+    </aside>
+</div>
+
+</body>
 </html>

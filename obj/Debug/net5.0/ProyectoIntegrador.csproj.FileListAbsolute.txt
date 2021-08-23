@@ -63,10 +63,8 @@ C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Dispositivo\Edit.cshtml
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Dispositivo\Delete.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Dispositivo\Create.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Usuario\Create.cshtml.g.cs
-C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Usuario\Delete.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Usuario\Details.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Usuario\Edit.cshtml.g.cs
-C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Usuario\Index.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Rol\Index.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Rol\Edit.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Rol\Create.cshtml.g.cs
@@ -153,3 +151,5 @@ C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Administrador\Delete.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Administrador\Details.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Administrador\Edit.cshtml.g.cs
 C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Administrador\Index.cshtml.g.cs
+C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Usuario\Delete.cshtml.g.cs
+C:\Udemy\ProyectoIntegrador\obj\Debug\net5.0\Razor\Views\Usuario\Index.cshtml.g.cs

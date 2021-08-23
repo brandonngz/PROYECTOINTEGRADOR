@@ -2,24 +2,31 @@
 @{
     ViewData["Title"] = "Menú";
 }
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width" />
+     <link rel="stylesheet" href="~/css/index.css">
+    <title>Index</title>
 </head>
 <body>
-    <div>  
-        <div class="row">
-            <div class="col-2"><h4>Roles 🡣</h4></div>
-            <div class="col-8"><p><u>Nunca Eliminar el Rol de un Administrador vigente, favor de editarlo y poner IdRol #1</u></p></div>
-        </div>
-    </div>
-    <br>
-        <table class="table table-striped">
-            <thead class="table-dark">
+
+<div class="containers font">
+    <header  class="header " >
+        <h4>GESTIÓN DE ROLES <i class="bi bi-gear-fill"></i></h4>
+    </header>
+    <div class="main">
+            <div class="img">
+                    <img src="https://image.flaticon.com/icons/png/512/103/103230.png" class="brand_logo" alt="Logo">
+            </div>
+        <h4>Tabla con Información 🡣</h4>
+        <br>
+        <br>
+        <br>
+        <div class="middle">
+        <table class="table table-striped table-">
+            <thead class="table-dark ">
                 <tr>
                     <th scope="col">
                         @Html.DisplayNameFor(model => model.IdRol)
@@ -27,29 +34,43 @@
                     <th scope="col">
                         @Html.DisplayNameFor(model => model.Descripcion)
                     </th>
-                    <th class="text-center">
-                        <a asp-action="Create" class="btn btn-light"><i class="bi bi-person-plus-fill bi-lg"></i> Nuevo Rol</a>
-                    </th>
+                    
+                    <th class="text-center"><a class="btn btn-light" href="http://localhost:5000/Administrador">Administrador</a></th>
                 </tr>
             </thead>
             <tbody>
-                
-                @foreach (var item in Model){@*Aqui colocaremos, mas adelante el codigo para mostrar los registros de la base de datos*@
-                    <tr>
-                        <td scope="row">
-                            @Html.DisplayFor(modelItem => item.IdRol)
-                        </td>
-                        <td scope="row">
-                            @Html.DisplayFor(modelItem => item.Descripcion)
-                        </td>
-                        <td class="text-center">
-                            <a asp-action="Edit" asp-route-id="@item.IdRol"><i class="bi bi-pen-fill"></i></a>
-                            <a asp-action="Delete" asp-route-id="@item.IdRol" class="text-danger"><i class="bi bi-trash-fill ml-3"> </i></a>
-                        </td>
-                    </tr>
+                    @foreach (var item in Model) {
+                <tr>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.IdRol)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    
+                    <td class="text-center">
+                        <a asp-action="Edit" asp-route-id="@item.IdRol" class="text-dark"><i class="bi bi-pen-fill" ></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.IdRol" class="text-danger"><i class="bi bi-trash-fill ml-3"> </i></a>
+                    </td>
+                </tr>
+                     
                 }
             </tbody>
-</table>
+        </table>
+        </div>
+    </div>
+    <aside class="sidebar text-center">
+        <h4 style="padding: 10px;">Menú</h4>
+        <tr>
+            <th>
+                <a asp-action="Create" class="btn btn-dark"><i class="bi bi-person-plus-fill bi-lg"></i> Nuevo Rol</a>
+            </th>
+        </tr>
+        <hr>
+        <h5 style="text-align: left; padding: 10px 0px 0px 10px;">Tip:</h5>
+        <p style="text-align: left; padding: 0px 0px 0px 10px;;">Nuevo Rol: Nuevo puesto de la casa de seguiridad.</p>
+    </aside>
+</div>
 
 </body>
 </html>

@@ -8,51 +8,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/EditarDeleteCreateView.js"></script>
+    <link rel="stylesheet" href="~/css/delete.css">
     <title>Document</title>
 </head>
-    <body> @**@
-        <h4>¿Está seguro de eliminar este registro de la BD?</h4>
-        <hr>
-        <h5>Dispositivo sensor 🡣</h5>
-        <br>
-            <div>
-                <dl class="row"> @*Lista de descripcion*@
-                    <dt  class = "col-sm-2">@*Texto de descripcion, titulo*@
+<body> @**@
+        <div class="containers">
+            <header class="header">
+                    <h4>ELIMINACIÓN DE USUARIO <i class="bi bi-gear-fill"></i></h4>   
+            </header>  
+                <div class="main">
+                     <div class="editt">
+                        <h5>Dispositivo ↴</h5>
+                        <dl class="row"> @*Lista de descripcion*@
+                            <dt>@*Texto de descripcion, titulo*@
+                                
+                                @Html.DisplayNameFor(modelo => modelo.Nombre)
+                            </dt>
+                            <dd>@*element contains data that describes a definition term*@
+                                @Html.DisplayFor(modelo => modelo.Nombre)
+                            </dd>
                         
-                        @Html.DisplayNameFor(modelo => modelo.Nombre)
-                    </dt>
-                    <dd class = "col-sm-10">@*element contains data that describes a definition term*@
-                        @Html.DisplayFor(modelo => modelo.Nombre)
-                    </dd>
-                
-                    <dt class = "col-sm-2">@*Texto de descripcion, titulo*@
-                        @Html.DisplayNameFor(modelo => modelo.Codigo)
-                    </dt>
-                    <dd class = "col-sm-10">@*element contains data that describes a definition term*@
-                        @Html.DisplayFor(modelo => modelo.Codigo)
-                    </dd>
-                    <dt class = "col-sm-2">
-                        @Html.DisplayNameFor(modelo => modelo.Ubicacion)
-                    </dt>
-                    <dl class = "col-sm-10">
-                        @Html.DisplayFor(modelo => modelo.Ubicacion)
-                    </dl>
-                
-                    <dt class = "col-sm-2">
-                        @Html.DisplayNameFor(modelo => modelo.Descripcion)
-                    </dt>
-                    <dd class = "col-sm-10">
-                        @Html.DisplayFor(modelo => modelo.Descripcion)
-                    </dd>
-
-                </dl>
-                <hr>
-                    <form asp-action="Delete">
-                        <input type="hidden" asp-for="IdDispositivo"/>
+                            <dt>@*Texto de descripcion, titulo*@
+                                @Html.DisplayNameFor(modelo => modelo.Codigo)
+                            </dt>
+                            <dd >@*element contains data that describes a definition term*@
+                                @Html.DisplayFor(modelo => modelo.Codigo)
+                            </dd>
+                            <dt >
+                                @Html.DisplayNameFor(modelo => modelo.Ubicacion)
+                            </dt>
+                            <dl >
+                                @Html.DisplayFor(modelo => modelo.Ubicacion)
+                            </dl>
+                        
+                            <dt >
+                                @Html.DisplayNameFor(modelo => modelo.Descripcion)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(modelo => modelo.Descripcion)
+                            </dd>
+                        </dl>
+                        <hr>
+                        <form asp-action="Delete">
+                            <input type="hidden" asp-for="IdDispositivo"/>
                             <input type="submit" onclick="Alert()" value="Eliminar" class="btn btn-danger " style="margin: 0 20px 0px 0px;"/>
                             <a asp-action="Index"class="btn btn-secondary" ><i class="bi bi-backspace"></i> Volver</a>
-                    </form>
-            </div>
-    </body>
+                        </form>
+                    </div>
+                </div>
+        </div>
+
+           
+</body>
 </html>

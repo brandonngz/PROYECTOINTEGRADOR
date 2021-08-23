@@ -8,49 +8,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/edit.css">
     <script src="~/js/alert.js"></script>
     <title>Document</title>
 </head> @**@
-    <body> 
-        <h4>Dispositivo sensor 🡣</h4>
-        
-        <div class="row">
-             <div class="col-md-4">@*Desde index llamamos al metodo Edit y le pasamos el parametro IdDispositivo*@
-                 <hr>
-                <form asp-action="Edit">
-                      @*                          🡻  Validar si nos colocan un valor vacio en el HTML*@   
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                      @*      🡻hidden para que permanezca oculto*@           
-                     <input type="hidden" asp-for="IdDispositivo">   
-                    <div class="form-group">
-                         @*Con ModelOnly y la etiqueta span hacemos una validacion a nuestras listas*@
-                        <label asp-for="Nombre" class="control-label"></label>
-                        <input asp-for="Nombre" class="form-control">
-                        <span asp-validation-for="Nombre" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Codigo" class="control-label"></label>
-                        <input asp-for="Codigo" class="form-control">
-                        <span asp-validation-for="Codigo" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Ubicacion" class="control-label"></label>
-                        <input asp-for="Ubicacion" class="form-control">
-                        <span asp-validation-for="Ubicacion" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Descripcion" class="control-label"></label>
-                        <input asp-for="Descripcion" class="form-control">
-                        <span asp-validation-for="Descripcion" class="text-danger"></span>
-                    </div>
-                    <hr>
-                    <div class="form-group"> 
-                            @*      Boton con accion submit*@   
-                        <input type="submit" onclick="Alert()" value="Guardar" class="btn btn-primary" style="margin: 0 20px 0px 0px;"> 
-                        <a asp-action="Index"class="btn btn-secondary" ><i class="bi bi-backspace"></i> Volver</a>
-                    </div>
-                </form>
-            </div>   
+<body> 
+    <div class="containers">
+        <div class="main">
+            <header class="header">
+                <h4>EDICIÓN DE USUARIO <i class="bi bi-gear-fill"></i></h4>
+            </header>
+                <div class="row">
+                    <div class="col-md-4">@*Desde index llamamos al metodo Edit y le pasamos el parametro IdDispositivo*@
+                        <hr>
+                        <div class="editt">
+                            <form asp-action="Edit">
+                            @*                          🡻  Validar si nos colocan un valor vacio en el HTML*@   
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            @*      🡻hidden para que permanezca oculto*@           
+                            <input type="hidden" asp-for="IdDispositivo">   
+                            <div class="form-group">
+                                @*Con ModelOnly y la etiqueta span hacemos una validacion a nuestras listas*@
+                                <label asp-for="Nombre" class="control-label"></label>
+                                <input asp-for="Nombre" class="form-control">
+                                <span asp-validation-for="Nombre" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Codigo" class="control-label"></label>
+                                <input asp-for="Codigo" class="form-control">
+                                <span asp-validation-for="Codigo" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Ubicacion" class="control-label"></label>
+                                <input asp-for="Ubicacion" class="form-control">
+                                <span asp-validation-for="Ubicacion" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Descripcion" class="control-label"></label>
+                                <input asp-for="Descripcion" class="form-control">
+                                <span asp-validation-for="Descripcion" class="text-danger"></span>
+                            </div>
+                            <hr>
+                            <div class="form-group"> 
+                                    @*      Boton con accion submit*@   
+                                <input type="submit" onclick="Alert()" value="Guardar" class="btn btn-primary" style="margin: 0 20px 0px 0px;"> 
+                                <a asp-action="Index"class="btn btn-secondary" ><i class="bi bi-backspace"></i> Volver</a>
+                            </div>
+                        </form>
+                        </div>
+                
+                    </div>   
+            </div>
         </div>
-    </body>
+            <aside class="sidebar text">
+                <h4>Información sobre Dispositivo</h4>
+                <br>
+                <br>
+                <p><i class="bi bi-asterisk"></i></i>  Nombre: Máximo 10 Caracteres.</p>
+                <p><i class="bi bi-upc-scan"></i></i>  Código: Máximo 7 Caracteres. </p>
+                <p><i class="bi bi-geo-alt-fill"></i></i>  Ubicacion: Máximo 20 Caracteres. </p>
+                <p><i class="bi bi-file-earmark-easel"></i></i>  Descripcion: Máximo 20 Caracteres. </p>
+            </aside>
+    </div>
+        
+</body>
 </html>

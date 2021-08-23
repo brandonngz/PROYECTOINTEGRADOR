@@ -1,63 +1,71 @@
 @model ProyectoIntegrador.Models.Administrador
-
+@{
+    ViewData["Title"] = "Eliminar";
+}
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-  
-    <title>Delete</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/css/delete.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<div class="containers">
+    <header class="header">
+        <h4>ELIMINACIÓN DE ADMINISTRADOR <i class="bi bi-gear-fill"></i></h4>   
+    </header>
+            <div class="main">
+                <div class="editt">
+                    <h5>Administrador ↴</h5>
+                    <dl class="row"> @*agregar descripciones*@
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd >
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Apellido)
+                        </dt>
+                        <dd >
+                            @Html.DisplayFor(model => model.Apellido)
+                        </dd>
+                        <dt     >
+                            @Html.DisplayNameFor(model => model.Direccion)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Direccion)
+                        </dd>
+                        <dt >
+                            @Html.DisplayNameFor(model => model.Telefono)
+                        </dt>
+                        <dd >
+                            @Html.DisplayFor(model => model.Telefono)
+                        </dd>
+                        <dt >
+                            @Html.DisplayNameFor(model => model.Email)
+                        </dt>
+                        <dd >    
+                            @Html.DisplayFor(model => model.Email)
+                        </dd>
+                        <dt >
+                            @Html.DisplayNameFor(model => model.AdministradorRol[0].Rol.Descripcion)
+                        </dt>
+                        <dd >
+                            @Html.DisplayFor(model => model.AdministradorRol[0].Rol.Descripcion)
+                        </dd>
+                    </dl>
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="IdAdministrador"/>
+                        <input type="submit" onclick="Alert()" value="Eliminar" class="btn btn-danger " style="margin: 0 20px 0px 0px;"/>
+                        <a asp-action="Index"class="btn btn-secondary" ><i class="bi bi-backspace"></i> Volver</a>
+                    </form>            
+            </div>          
+        </div>
+</div>      
 
-<h3>¿Está seguro de eliminar este registro de la BD?</h3>
-<div>
-    <h4>Administrador</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Apellido)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Apellido)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Direccion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Direccion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Telefono)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Telefono)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AdministradorRol[0].Rol.Descripcion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AdministradorRol[0].Rol.Descripcion)
-        </dd>
-    </dl>
-    <hr>
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="IdAdministrador" />
-        <input type="submit" onclick="Alert()" value="Eliminar" class="btn btn-danger " style="margin: 0 20px 0px 0px;"/>
-        <a asp-action="Index"class="btn btn-secondary" ><i class="bi bi-backspace"></i> Volver</a>
-    </form>
-</div>
+
+
 </body>
 </html>

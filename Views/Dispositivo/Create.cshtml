@@ -7,20 +7,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="/js/EditarDeleteCreateView.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="~/css/edit.css">
 </head>@**@
-    <body>
-        <h5>Dispositivo sensor ↴</h5>
-        <div class="row">
+<body>
+
+    <div class="containers">
+        <div class="main">
+            <header class="header">
+                <h4>CREACIÓN DE DISPOSITIVO <i class="bi bi-gear-fill"></i></h4>
+            </header>
+            <div class="row">
             <div class="col-md-4">
-                <hr>@*  
-                    🡻Ejecuta el metodo create de tipo HttpPost*@       
-                <form asp-action="Create" name="myForm" onsubmit="return validateForm()" method="post" required>
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div class="editt">
+                     @*  🡻Ejecuta el metodo create de tipo HttpPost*@ 
+                <form asp-action="Create">
+                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-floating mb-3 form-group">
-                        <input asp-for="Nombre"  class="form-control"id="floatingInput" placeholder="Nombre" name="fname"/>
+                        <input asp-for="Nombre"  class="form-control"id="floatingInput" placeholder="Nombre"/>
                         <label asp-for="Nombre" class="control-label"></label>
                             @*Mostrar nuestras validaciones en Conjunto con ModelOnly*@
                         <span asp-validation-for="Nombre" class="text-danger"></span>
@@ -42,12 +47,27 @@
                     </div>
                     <hr>
                     <div class="form-group">
-                        <input type="submit" value="Guardar" class="btn btn-primary " style="margin: 0 20px 0px 0px;"/>
+                        <input type="submit"  value="Guardar" class="btn btn-primary " style="margin: 0 20px 0px 0px;"/>
                         <a asp-action="Index"class="btn btn-secondary" ><i class="bi bi-backspace"></i> Volver</a>
                     </div>
                 </form>
+                
+            </div>    
             </div>
         </div>  
+        </div>
+            <aside class="sidebar text">
+                <h4>Información sobre Dispositivo</h4>
+                <br>
+                <br>
+                <p><i class="bi bi-asterisk"></i></i>  Nombre: Máximo 10 Caracteres.</p>
+                <p><i class="bi bi-upc-scan"></i></i>  Código: Máximo 7 Caracteres. </p>
+                <p><i class="bi bi-geo-alt-fill"></i></i>  Ubicación: Máximo 20 Caracteres. </p>
+                <p><i class="bi bi-file-earmark-easel"></i></i>  Descripción: Máximo 20 Caracteres. </p>
+            </aside>
+    </div>
+
+        
  
-    </body>
+</body>
 </html>

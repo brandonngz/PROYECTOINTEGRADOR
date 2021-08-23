@@ -4,7 +4,10 @@
     {
         Context.Response.Redirect("/Login");
     }
+
 }
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +29,7 @@
 </head>
 <body style="background-color: #EEEEEE;">
     <header >
+        
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-5 ">
             <div class="container" >
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Proyecto Integrador</a>
@@ -70,23 +74,45 @@
                              <li class="nav-item">
                                  <a class="nav-link text-dark" asp-area="" asp-controller="Historial" asp-action="Index">Historial</a>
                              </li>
-                              <li class="nav-item">
+                              @* <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Documentacion">Documentación</a>
-                            </li>
+                                </li> *@
                         
                     </ul>
+                   
                     <ul class="nav justify-content-end">
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Login" asp-action="Logout">Cerrar Sesión</a></li>     
+                        <li><!-- Large button groups (default and split) -->
+                                <div class="btn-group">
+                                    <button class="btn  btn-mg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Información
+                                        </button>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item" >
+                                                    <h5 style="font-style: italic; font-size: 17px; text-align: center;">Usuario: @Context.Session.GetString("usuario")</h5>
+                                                </li>
+                                                    <li class="nav-item">                            @*Ejecutar el controlador Rol con el metodo Index*@ 
+                                                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Login" asp-action="Logout" style="font-style: italic;">Cerrar Sesión</a></li> 
+                                                    </li>
+                                            </ul>
+                                </div>
+                        </li>
+    
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <div>
+        
+    </div>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+    
     <footer class="border-top footer text-muted" style="background-color: #ffff;">
         <div class="container">
             <style>A {text-decoration: none;} </style>

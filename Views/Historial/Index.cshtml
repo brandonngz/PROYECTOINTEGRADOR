@@ -10,13 +10,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/index.css">
     <title>Document</title>
 </head>
 <body>
-    <h4>Historial 🡣</h4>
-<br>       
-<table class="table table-striped table-hover table-bordered">
-    <thead class="table-dark">
+    <header  class="header " >
+        <h4>GESTIÓN DE HISTORIAL <i class="bi bi-gear-fill"></i></h4>
+    </header>
+<br>
+<div class="main">
+        <table class="table table-striped table-hover table-bordered">
+    <thead class="table-dark" style="padding: 10px">
         <tr>
             <th scope="col">
                 @Html.DisplayNameFor(model => model.IdHistorial)
@@ -31,7 +35,7 @@
                 @Html.DisplayNameFor(model => model.usuario)
             </th>
            
-            <th></th>
+            <th>Eliminar</th>
         </tr>
     </thead>
     <tbody>
@@ -57,5 +61,11 @@
     
     </tbody>
 </table>
+    <div>
+        
+        <a class="btn btn-secondary" href="http://localhost:5000/Home"><i class="bi bi-backspace"></i> Volver</a>
+    </div>
+</div>
+
 </body>
 </html>

@@ -7,14 +7,3 @@
 function Alert(){
     alert("Los datos se han actualizado en la BD ProyectoIntegrador.")
 }
-
-
-function validateForm() {
-    var x = document.forms["myForm"]["fname"].value;
-    if (x == "") {
-      alert("El nombre debe ser llenado");
-      return false;
-    }
-  }
-
-  document.getElementById('textId').value = '';

@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Udemy\\ProyectoIntegrador\\ProyectoIntegrador.csproj",
+  "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\ProyectoIntegrador.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15619,148 +15619,148 @@
   "RootNamespace": "ProyectoIntegrador",
   "Documents": [
     {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Dispositivo\\Index.cshtml",
-      "TargetPath": "Views\\Dispositivo\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Administrador\\Details.cshtml",
-      "TargetPath": "Views\\Administrador\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Usuario\\Index.cshtml",
-      "TargetPath": "Views\\Usuario\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Historial\\Index.cshtml",
-      "TargetPath": "Views\\Historial\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Usuario\\Delete.cshtml",
-      "TargetPath": "Views\\Usuario\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Login\\Index.cshtml",
-      "TargetPath": "Views\\Login\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Rol\\Create.cshtml",
-      "TargetPath": "Views\\Rol\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Administrador\\Create.cshtml",
-      "TargetPath": "Views\\Administrador\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Dispositivo\\Edit.cshtml",
-      "TargetPath": "Views\\Dispositivo\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Usuario\\Edit.cshtml",
-      "TargetPath": "Views\\Usuario\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Rol\\Index.cshtml",
-      "TargetPath": "Views\\Rol\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Administrador\\Index.cshtml",
-      "TargetPath": "Views\\Administrador\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Usuario\\Create.cshtml",
-      "TargetPath": "Views\\Usuario\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Historial\\Delete.cshtml",
-      "TargetPath": "Views\\Historial\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Administrador\\Delete.cshtml",
-      "TargetPath": "Views\\Administrador\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Dispositivo\\Delete.cshtml",
-      "TargetPath": "Views\\Dispositivo\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Usuario\\Details.cshtml",
-      "TargetPath": "Views\\Usuario\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Dispositivo\\Create.cshtml",
-      "TargetPath": "Views\\Dispositivo\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Rol\\Edit.cshtml",
-      "TargetPath": "Views\\Rol\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Home\\Documentacion.cshtml",
-      "TargetPath": "Views\\Home\\Documentacion.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Rol\\Delete.cshtml",
-      "TargetPath": "Views\\Rol\\Delete.cshtml",
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Home\\Documentacion.cshtml",
+      "TargetPath": "Views\\Home\\Documentacion.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Administrador\\Create.cshtml",
+      "TargetPath": "Views\\Administrador\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Login\\Index.cshtml",
+      "TargetPath": "Views\\Login\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Administrador\\Edit.cshtml",
+      "TargetPath": "Views\\Administrador\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Usuario\\Index.cshtml",
+      "TargetPath": "Views\\Usuario\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Dispositivo\\Delete.cshtml",
+      "TargetPath": "Views\\Dispositivo\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Udemy\\ProyectoIntegrador\\Views\\Administrador\\Edit.cshtml",
-      "TargetPath": "Views\\Administrador\\Edit.cshtml",
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Dispositivo\\Edit.cshtml",
+      "TargetPath": "Views\\Dispositivo\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Usuario\\Edit.cshtml",
+      "TargetPath": "Views\\Usuario\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Historial\\Index.cshtml",
+      "TargetPath": "Views\\Historial\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Administrador\\Index.cshtml",
+      "TargetPath": "Views\\Administrador\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Rol\\Edit.cshtml",
+      "TargetPath": "Views\\Rol\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Administrador\\Delete.cshtml",
+      "TargetPath": "Views\\Administrador\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Rol\\Delete.cshtml",
+      "TargetPath": "Views\\Rol\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Rol\\Index.cshtml",
+      "TargetPath": "Views\\Rol\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Dispositivo\\Create.cshtml",
+      "TargetPath": "Views\\Dispositivo\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Usuario\\Delete.cshtml",
+      "TargetPath": "Views\\Usuario\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Administrador\\Details.cshtml",
+      "TargetPath": "Views\\Administrador\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Rol\\Create.cshtml",
+      "TargetPath": "Views\\Rol\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Historial\\Delete.cshtml",
+      "TargetPath": "Views\\Historial\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Usuario\\Details.cshtml",
+      "TargetPath": "Views\\Usuario\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Usuario\\Create.cshtml",
+      "TargetPath": "Views\\Usuario\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Proyecto\\ProyectoIntegrador\\Views\\Dispositivo\\Index.cshtml",
+      "TargetPath": "Views\\Dispositivo\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],
