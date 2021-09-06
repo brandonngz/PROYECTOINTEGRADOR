@@ -8,3 +8,8 @@ Login de mi Web App
 Index Page.
 ![image](https://user-images.githubusercontent.com/49128144/132264307-3ef1c771-cf09-4797-bc0a-eeb47ade5607.png)
 
+
+
+Administrador Page.
+![image](https://user-images.githubusercontent.com/49128144/132264366-d9031c90-bbce-454f-873b-58f6ad1718e5.png)
+
